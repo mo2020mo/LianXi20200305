@@ -12,17 +12,20 @@
 
 # here put the import lib
 import time, random
+from termcolor import colored       #引用termcolor.colored函数改变文字在控制台的颜色
+import colorama                     #引用colorama函数
+colorama.init()                     #要使termcolor中使用的ANSI颜色与windows终端一起使用,不处理控制台输出可能会乱码
 class Bot():
     wait = 1       #类变量,延时一分钟
     def __init__(self):
         self.q = ''
 
     def _think(self,s):
-        return s 
+        return s
 
     def _say(self,s):     #_say函数的功能: 说话(print)时启用一个延时
         time.sleep(Bot.wait)
-        print(s)    
+        print(colored(s,'blue'))    
 
     def run(self):
         self._say(self.q)
