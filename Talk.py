@@ -13,6 +13,7 @@
 # here put the import lib
 import time, random
 class Bot():
+    wait = 1       #类变量,延时一分钟
     def __init__(self):
         self.q = ''
 
@@ -20,8 +21,10 @@ class Bot():
         return s 
 
     def run(self):
+        time.sleep(Bot.wait)       #引用Time函数,引入类变量
         print(self.q)
         self.a = input()
+        time.sleep(Bot.wait)
         print(self._think(self.a))
 
 class Hello(Bot):
