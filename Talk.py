@@ -51,9 +51,25 @@ class Favcolor(Bot):
         colors = ['red','orange','blue','yellow','blue','puple','indigo','black','white']
         return f"You favouite color is {color}. My favouite color is {random.choice(colors)}! "
 
-h = Hello()
-g = Geatfeeling()
-f = Favcolor()
-h.run()
-g.run()
-f.run()
+class TalkBot():
+    def __init__(self):
+        self.bots = []
+    def _add(self,bot):
+        self.bots.append(bot)
+    def run(self):
+        print("Welcome to Talk-diglog system. Let\'s talk...\n")
+        for bot in self.bots:
+            bot.run()
+
+talkbot = TalkBot()
+talkbot._add(Hello())
+talkbot._add(Geatfeeling())
+talkbot._add(Favcolor())
+talkbot.run()
+
+# h = Hello()
+# g = Geatfeeling()
+# f = Favcolor()
+# h.run()
+# g.run()
+# f.run()
