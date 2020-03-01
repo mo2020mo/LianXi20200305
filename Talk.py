@@ -20,12 +20,14 @@ class Bot():
     def _think(self,s):
         return s 
 
-    def run(self):
-        time.sleep(Bot.wait)       #引用Time函数,引入类变量
-        print(self.q)
-        self.a = input()
+    def _say(self,s):     #_say函数的功能: 说话(print)时启用一个延时
         time.sleep(Bot.wait)
-        print(self._think(self.a))
+        print(s)    
+
+    def run(self):
+        self._say(self.q)
+        self.a = input()
+        self._say(self._think(self.a))
 
 class Hello(Bot):
     def __init__(self):
