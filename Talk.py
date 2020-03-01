@@ -37,7 +37,7 @@ class Geatfeeling(Bot):
         if 'good' in feeling.lower():
             return "I\'m feeling great too..."
         else:
-            return "Soory to hear that...
+            return "Soory to hear that..."
             
 class Favcolor(Bot):
     def __init__(self):
