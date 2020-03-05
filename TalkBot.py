@@ -17,5 +17,6 @@ if __name__ == '__main__':
     talkbot._add(Hello())
     talkbot._add(Geatfeeling())
     talkbot._add(Favcolor())
+    talkbot._add(clacl("looped"))
     #运行
     talkbot.run()
